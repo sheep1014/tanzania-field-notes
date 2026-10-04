@@ -561,5 +561,26 @@
         "alt": "非洲秃鹳 · 旅行实拍"
       }
     ]
+  },
+  {
+    "id": "darnauds-barbet",
+    "name": "东非拟啄木鸟",
+    "en": "D’Arnaud’s Barbet",
+    "family": "非洲拟啄木鸟科 · Lybiidae",
+    "category": "bird",
+    "intro": "生活在东非疏林与灌丛，取食昆虫、果实和种子。照片外形接近东非拟啄木鸟类群，暂作候选记录，具体种及亚种待确认。",
+    "uncertain": true,
+    "images": [
+      {
+        "src": "images/darnauds-barbet-1.webp",
+        "thumb": "images/darnauds-barbet-1-thumb.webp",
+        "alt": "地面上的拟啄木鸟，疑似东非拟啄木鸟，具体种待确认"
+      }
+    ],
+    "sources": [
+      "https://ebird.org/species/darbar1",
+      "https://www.oiseaux.net/en/oiseaux/d.arnaud.s.barbet.html",
+      "https://carolinabirds.org/HTML/Pici_Barbet.htm"
+    ]
   }
 ]
