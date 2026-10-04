@@ -402,5 +402,21 @@
         "alt": "尼罗巨蜥背面影像（向导现场辨认）"
       }
     ]
+  },
+  {
+    "id": "vervet",
+    "name": "黑长尾猴",
+    "en": "Vervet Monkey",
+    "family": "猴科 · Cercopithecidae",
+    "category": "mammal",
+    "intro": "学名：Chlorocebus pygerythrus。群居，食物以果实、叶和种子等植物性食物为主，也取食昆虫等小动物。照片中可见一只幼猴紧贴成年个体腹部。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/vervet-1.webp",
+        "thumb": "images/vervet-1-thumb.webp",
+        "alt": "黑长尾猴与腹部紧贴的幼猴"
+      }
+    ]
   }
 ]
