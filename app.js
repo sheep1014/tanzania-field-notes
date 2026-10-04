@@ -78,16 +78,38 @@
 
   function showImage() {
     const photos = state.animal.images;
-    const image = $('#detail-image');
+    const previous = $('#detail-image');
     const photo = photos[state.image];
-    image.hidden = !photo;
-    if (photo) {
-      image.src = photoPath(photo.src);
-      image.alt = photo.alt || `${state.animal.name}，第 ${state.image + 1} 张照片`;
-    } else {
-      image.removeAttribute('src');
-      image.alt = '';
+    // A fresh node cannot retain pixels from the previous animal.
+    const image = new Image();
+    image.id = 'detail-image';
+    image.hidden = true;
+    image.alt = photo ? (photo.alt || `${state.animal.name}，第 ${state.image + 1} 张照片`) : '';
+    previous.replaceWith(image);
+    const frame = image.parentElement;
+    let status = frame.querySelector('[role="status"]');
+    if (!status) {
+      status = element('p', 'identification');
+      status.setAttribute('role', 'status');
+      frame.append(status);
     }
+    status.hidden = false;
+    status.textContent = photo ? '图片加载中…' : '影像待补充';
+    frame.setAttribute('aria-busy', String(Boolean(photo)));
+    const isCurrent = () => image.isConnected && $('#detail-image') === image;
+    image.onerror = () => {
+      if (!isCurrent()) return;
+      frame.setAttribute('aria-busy', 'false');
+      status.textContent = '图片加载失败，请重新打开详情。';
+    };
+    image.onload = async () => {
+      try { await image.decode(); } catch (_) { image.onerror(); return; }
+      if (!isCurrent()) return;
+      frame.setAttribute('aria-busy', 'false');
+      status.hidden = true;
+      image.hidden = false;
+    };
+    if (photo) image.src = photoPath(photo.src);
     $('#image-count').textContent = photo ? `${String(state.image + 1).padStart(2, '0')} / ${String(photos.length).padStart(2, '0')}` : '影像待补充';
     $('#previous-image').disabled = state.image === 0;
     $('#next-image').disabled = state.image >= photos.length - 1;
