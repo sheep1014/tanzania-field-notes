@@ -418,5 +418,21 @@
         "alt": "黑长尾猴与腹部紧贴的幼猴"
       }
     ]
+  },
+  {
+    "id": "ostrich",
+    "name": "非洲鸵鸟",
+    "en": "Common Ostrich",
+    "family": "鸵鸟科 · Struthionidae",
+    "category": "bird",
+    "intro": "学名：Struthio camelus。大型不飞鸟，生活在开阔草原，善于奔跑，以植物性食物为主。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/ostrich-1.webp",
+        "thumb": "images/ostrich-1-thumb.webp",
+        "alt": "草原上的非洲鸵鸟"
+      }
+    ]
   }
 ]
