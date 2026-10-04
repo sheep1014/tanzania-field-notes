@@ -621,5 +621,25 @@
       "https://animaldiversity.org/accounts/Eudorcas_thomsonii/",
       "https://www.inaturalist.org/zh-CN/taxa/74321-Eudorcas-thomsonii"
     ]
+  },
+  {
+    "id": "dik-dik",
+    "name": "犬羚",
+    "en": "Dik-dik",
+    "family": "牛科 · Bovidae",
+    "category": "mammal",
+    "intro": "小型羚羊，常成对活动，以灌木的嫩叶、嫩枝等植物为食。照片外形接近柯氏犬羚（Madoqua kirkii），暂按犬羚类群记录，具体种类待确认。",
+    "uncertain": true,
+    "images": [
+      {
+        "src": "images/dik-dik-1.webp",
+        "thumb": "images/dik-dik-1-thumb.webp",
+        "alt": "干草间回望的犬羚，具体种类待确认"
+      }
+    ],
+    "sources": [
+      "https://animaldiversity.org/accounts/Madoqua_kirkii/",
+      "https://www.brookfieldzoo.org/animals/kirks-dik-dik"
+    ]
   }
 ]
