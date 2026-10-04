@@ -7,6 +7,14 @@
   const dialog = $('#animal-dialog');
   const filters = [...document.querySelectorAll('[data-category]')];
   const state = { animals: [], category: 'all', query: '', animal: null, image: 0, trigger: null, scroll: 0, loaded: false };
+  const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const animate = (node, frames, duration = 220) => {
+    if (reducedMotion()) return null;
+    node.getAnimations().forEach((motion) => motion.cancel());
+    return node.animate(frames, { duration, easing: 'cubic-bezier(.22,.68,0,1)' });
+  };
+  let closing = false;
+  let imageDirection = 0;
   const indexLabel = (index) => String(index + 1).padStart(2, '0');
   const normalized = (value) => String(value || '').normalize('NFKC').toLocaleLowerCase().trim();
   const element = (tag, className, text) => {
@@ -63,6 +71,7 @@
     const fragment = document.createDocumentFragment();
     matches.forEach(({ animal, index }) => fragment.append(createCard(animal, index)));
     grid.replaceChildren(fragment);
+    animate(grid, [{ opacity: .35, transform: 'translateY(6px)' }, { opacity: 1, transform: 'none' }], 180);
     $('#empty-state').hidden = matches.length !== 0;
     $('#empty-title').textContent = state.animals.length ? '未找到匹配条目' : '暂无观察记录';
     $('#empty-description').textContent = state.animals.length ? '请调整检索词或分类条件。' : '影像与分类资料尚未录入。';
@@ -100,7 +109,7 @@
     image.onerror = () => {
       if (!isCurrent()) return;
       frame.setAttribute('aria-busy', 'false');
-      status.textContent = '图片加载失败，请重新打开详情。';
+      status.textContent = '图片暂时无法载入。';
     };
     image.onload = async () => {
       try { await image.decode(); } catch (_) { image.onerror(); return; }
@@ -108,16 +117,18 @@
       frame.setAttribute('aria-busy', 'false');
       status.hidden = true;
       image.hidden = false;
+      animate(image, [{ opacity: 0, transform: `translateX(${imageDirection * 28}px)` }, { opacity: 1, transform: 'translateX(0)' }], 220);
     };
     if (photo) image.src = photoPath(photo.src);
     $('#image-count').textContent = photo ? `${String(state.image + 1).padStart(2, '0')} / ${String(photos.length).padStart(2, '0')}` : '影像待补充';
-    $('#swipe-hint').hidden = photos.length < 2;
+
   }
 
   function openDetail(animal, index, trigger) {
     if (dialog.open) return;
     state.animal = animal;
     state.image = 0;
+    imageDirection = 0;
     state.trigger = trigger;
     state.scroll = window.scrollY;
     $('#detail-index').textContent = `COLLECTION / ${indexLabel(index)}`;
@@ -132,20 +143,34 @@
     document.body.style.top = `-${state.scroll}px`;
     document.body.style.width = '100%';
     dialog.showModal();
+    animate(dialog, [{ opacity: 0, transform: 'translateY(20px) scale(.985)' }, { opacity: 1, transform: 'translateY(0) scale(1)' }], 240);
     dialog.scrollTop = 0;
     $('#close-dialog').focus({ preventScroll: true });
   }
 
   function turnImage(step) {
-    if (!state.animal) return;
+    if (!state.animal || closing) return;
     const next = state.image + step;
     if (next < 0 || next >= state.animal.images.length) return;
+    imageDirection = step;
     state.image = next;
     showImage();
   }
 
-  $('#close-dialog').addEventListener('click', () => dialog.close());
+  function closeDetail() {
+    if (!dialog.open || closing) return;
+    closing = true;
+    dialog.classList.add('is-closing');
+    const motion = animate(dialog, [{ opacity: 1, transform: 'translateY(0)' }, { opacity: 0, transform: 'translateY(14px)' }], 170);
+    if (motion) motion.finished.catch(() => {}).then(() => { if (dialog.open) dialog.close(); });
+    else dialog.close();
+  }
+  $('#close-dialog').addEventListener('click', closeDetail);
+  dialog.addEventListener('cancel', (event) => { event.preventDefault(); closeDetail(); });
   dialog.addEventListener('close', () => {
+    closing = false;
+    dialog.classList.remove('is-closing');
+    dialog.getAnimations().forEach((motion) => motion.cancel());
     document.body.style.position = '';
     document.body.style.top = '';
     document.body.style.width = '';
@@ -159,7 +184,7 @@
   dialog.addEventListener('click', (event) => {
     if (event.target !== dialog) return;
     const bounds = dialog.getBoundingClientRect();
-    if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) dialog.close();
+    if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) closeDetail();
   });
   dialog.addEventListener('keydown', (event) => {
     if (event.key === 'ArrowLeft') { event.preventDefault(); turnImage(-1); }
@@ -169,20 +194,37 @@
   const swipeSurface = $('.detail-photo');
   let gesture = null;
   swipeSurface.addEventListener('pointerdown', (event) => {
-    if (!event.isPrimary || event.button !== 0 || !state.animal || state.animal.images.length < 2) return;
+    if (!event.isPrimary || event.button !== 0 || closing || !state.animal || state.animal.images.length < 2) return;
     gesture = { id: event.pointerId, x: event.clientX, y: event.clientY, animal: state.animal };
     if (event.isTrusted) swipeSurface.setPointerCapture(event.pointerId);
   });
+  swipeSurface.addEventListener('pointermove', (event) => {
+    if (!gesture || gesture.id !== event.pointerId || reducedMotion()) return;
+    const dx = event.clientX - gesture.x;
+    const dy = event.clientY - gesture.y;
+    if (Math.abs(dx) <= Math.abs(dy) * 1.5) return;
+    const image = $('#detail-image');
+    image.getAnimations().forEach((motion) => motion.cancel());
+    const edge = (dx > 0 && state.image === 0) || (dx < 0 && state.image === state.animal.images.length - 1);
+    image.style.transform = `translateX(${Math.max(-120, Math.min(120, dx * (edge ? .15 : .55)))}px)`;
+  });
+  function resetDrag() {
+    const image = $('#detail-image');
+    const start = image.style.transform;
+    image.style.transform = '';
+    if (start) animate(image, [{ transform: start }, { transform: 'translateX(0)' }], 180);
+  }
   swipeSurface.addEventListener('pointerup', (event) => {
     if (!gesture || gesture.id !== event.pointerId) return;
     const start = gesture;
     gesture = null;
+    resetDrag();
     const dx = event.clientX - start.x;
     const dy = event.clientY - start.y;
     if (dialog.open && state.animal === start.animal && Math.abs(dx) >= 40 && Math.abs(dx) > Math.abs(dy) * 1.5) turnImage(dx < 0 ? 1 : -1);
   });
-  swipeSurface.addEventListener('pointercancel', () => { gesture = null; });
-  swipeSurface.addEventListener('lostpointercapture', () => { gesture = null; });
+  swipeSurface.addEventListener('pointercancel', () => { gesture = null; resetDrag(); });
+  swipeSurface.addEventListener('lostpointercapture', () => { if (gesture) { gesture = null; resetDrag(); } });
   swipeSurface.addEventListener('dragstart', (event) => event.preventDefault());
   dialog.addEventListener('close', () => { gesture = null; });
   filters.forEach((button) => button.addEventListener('click', () => {

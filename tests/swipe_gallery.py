@@ -25,7 +25,7 @@ with sync_playwright() as p:
         assert page.locator('#previous-image').count()==0 and page.locator('#next-image').count()==0
         assert page.locator('.detail-photo').evaluate('(el)=>getComputedStyle(el).touchAction')=='pan-y pinch-zoom'
         # Exercise real browser-delivered gestures, not only DOM events.
-        page.locator('#close-dialog').click();page.locator('.card-button').click()
+        page.locator('#close-dialog').click();page.wait_for_function('!document.querySelector("dialog").open && document.body.style.position === ""');page.locator('.card-button').click()
         box=page.locator('.detail-photo').bounding_box();x=box['x']+box['width']*.75;y=box['y']+box['height']*.5
         if engine.name=='chromium':
             session=page.context.new_cdp_session(page)
@@ -35,6 +35,6 @@ with sync_playwright() as p:
         else:
             page.mouse.move(x,y);page.mouse.down();page.mouse.move(x-120,y,steps=8);page.mouse.up()
         assert page.locator('#image-count').inner_text()=='02 / 04'
-        page.locator('#close-dialog').click();page.locator('#search-input').fill('缟獴');page.locator('.card-button').click();swipe(-100);assert page.locator('#image-count').inner_text()=='01 / 01'
+        page.locator('#close-dialog').click();page.wait_for_function('!document.querySelector("dialog").open && document.body.style.position === ""');page.locator('#search-input').fill('缟獴');page.locator('.card-button').click();swipe(-100);assert page.locator('#image-count').inner_text()=='01 / 01'
         page.screenshot(path='/Users/sheeepsheepmac/.hermes/travel/animal-captions/swipe-review.png')
         print(engine.name,'PASS: horizontal, reverse, bounds, vertical, cancel, single-photo, no buttons');b.close()
