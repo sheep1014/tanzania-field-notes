@@ -508,5 +508,53 @@
         "alt": "动物尸体旁的兀鹫，具体种待确认"
       }
     ]
+  },
+  {
+    "id": "hyrax",
+    "name": "蹄兔",
+    "en": "Hyrax",
+    "family": "蹄兔科 · Procaviidae",
+    "category": "mammal",
+    "intro": "以植物性食物为主，外形似啮齿动物，但属于独立的蹄兔目。照片中的个体疑似树蹄兔，具体种待确认。",
+    "uncertain": true,
+    "images": [
+      {
+        "src": "images/hyrax-1.webp",
+        "thumb": "images/hyrax-1-thumb.webp",
+        "alt": "蹄兔 · 旅行实拍"
+      }
+    ]
+  },
+  {
+    "id": "colobus",
+    "name": "黑白疣猴",
+    "en": "Black-and-white Colobus",
+    "family": "猴科 · Cercopithecidae",
+    "category": "mammal",
+    "intro": "主要在树上活动，食物包括树叶与果实，常以群体生活。暂按黑白疣猴类群记录，照片不足以稳妥确定种。",
+    "uncertain": true,
+    "images": [
+      {
+        "src": "images/colobus-1.webp",
+        "thumb": "images/colobus-1-thumb.webp",
+        "alt": "黑白疣猴 · 旅行实拍"
+      }
+    ]
+  },
+  {
+    "id": "marabou",
+    "name": "非洲秃鹳",
+    "en": "Marabou Stork",
+    "family": "鹳科 · Ciconiidae",
+    "category": "bird",
+    "intro": "食性广，取食腐肉，也捕食鱼类及其他小型动物。学名：Leptoptilos crumenifer。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/marabou-1.webp",
+        "thumb": "images/marabou-1-thumb.webp",
+        "alt": "非洲秃鹳 · 旅行实拍"
+      }
+    ]
   }
 ]
