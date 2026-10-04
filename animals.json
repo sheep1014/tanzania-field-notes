@@ -471,5 +471,26 @@
         "alt": "白头牛文鸟 · 坦桑尼亚实拍"
       }
     ]
+  },
+  {
+    "id": "eland",
+    "name": "大羚羊",
+    "en": "Common Eland",
+    "family": "牛科 · Bovidae",
+    "category": "mammal",
+    "intro": "学名：Taurotragus oryx。大型羚羊，常成群活动，以树叶、嫩枝和草等植物为食。雌雄均有螺旋状角，喉部具有明显的垂皮。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/eland-1.webp",
+        "thumb": "images/eland-1-thumb.webp",
+        "alt": "大羚羊 · 草原影像 1"
+      },
+      {
+        "src": "images/eland-2.webp",
+        "thumb": "images/eland-2-thumb.webp",
+        "alt": "大羚羊 · 草原影像 2"
+      }
+    ]
   }
 ]
