@@ -620,6 +620,16 @@
         "src": "images/thomsons-gazelle-1.webp",
         "thumb": "images/thomsons-gazelle-1-thumb.webp",
         "alt": "树荫下成群的汤氏瞪羚"
+      },
+      {
+        "src": "images/thomsons-gazelle-2.webp",
+        "thumb": "images/thomsons-gazelle-2-thumb.webp",
+        "alt": "夕光下的汤氏瞪羚群"
+      },
+      {
+        "src": "images/thomsons-gazelle-3.webp",
+        "thumb": "images/thomsons-gazelle-3-thumb.webp",
+        "alt": "低头吃草的汤氏瞪羚近照"
       }
     ],
     "sources": [
