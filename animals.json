@@ -229,6 +229,21 @@
         "src": "images/leopard-1.webp",
         "thumb": "images/leopard-1-thumb.webp",
         "alt": "花豹 · 坦桑尼亚旅行实拍 1"
+      },
+      {
+        "src": "images/leopard-2.webp",
+        "thumb": "images/leopard-2-thumb.webp",
+        "alt": "花豹 · 旅行实拍 2"
+      },
+      {
+        "src": "images/leopard-3.webp",
+        "thumb": "images/leopard-3-thumb.webp",
+        "alt": "花豹 · 旅行实拍 3"
+      },
+      {
+        "src": "images/leopard-4.webp",
+        "thumb": "images/leopard-4-thumb.webp",
+        "alt": "花豹 · 旅行实拍 4"
       }
     ]
   },
