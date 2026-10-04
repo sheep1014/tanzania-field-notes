@@ -601,5 +601,25 @@
     "sources": [
       "https://animals.sandiegozoo.org/animals/chameleon"
     ]
+  },
+  {
+    "id": "thomsons-gazelle",
+    "name": "汤氏瞪羚",
+    "en": "Thomson’s Gazelle",
+    "family": "牛科 · Bovidae",
+    "category": "mammal",
+    "intro": "学名：Eudorcas thomsonii。生活在东非草原，常成群活动，以短草为主食，旱季也取食嫩枝和树叶。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/thomsons-gazelle-1.webp",
+        "thumb": "images/thomsons-gazelle-1-thumb.webp",
+        "alt": "树荫下成群的汤氏瞪羚"
+      }
+    ],
+    "sources": [
+      "https://animaldiversity.org/accounts/Eudorcas_thomsonii/",
+      "https://www.inaturalist.org/zh-CN/taxa/74321-Eudorcas-thomsonii"
+    ]
   }
 ]
