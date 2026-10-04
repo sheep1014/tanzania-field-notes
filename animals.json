@@ -389,17 +389,17 @@
   },
   {
     "id": "monitor",
-    "name": "巨蜥",
-    "en": "Monitor Lizard",
+    "name": "尼罗巨蜥",
+    "en": "Nile Monitor",
     "family": "巨蜥科 · Varanidae",
     "category": "reptile",
-    "intro": "多数种类以动物性食物为主，利用分叉的舌头探测环境中的气味。本照片以背部视角为主，缺少清晰头部及体侧特征，具体种类待确认。",
-    "uncertain": true,
+    "intro": "学名：Varanus niloticus。常见于水域附近，善于游泳和攀爬，以鱼类、昆虫、卵及其他动物性食物为食。辨认依据：向导现场指认及其提供的图鉴名称。",
+    "uncertain": false,
     "images": [
       {
         "src": "images/monitor-1.webp",
         "thumb": "images/monitor-1-thumb.webp",
-        "alt": "巨蜥背面影像，具体种待确认"
+        "alt": "尼罗巨蜥背面影像（向导现场辨认）"
       }
     ]
   }
