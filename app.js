@@ -26,7 +26,7 @@
     const article = element('article', 'animal-card');
     const button = element('button', 'card-button');
     button.type = 'button';
-    button.setAttribute('aria-label', `查看${animal.name}的照片与手记${animal.uncertain ? '，物种待确认' : ''}`);
+    button.setAttribute('aria-label', `查看${animal.name}的照片与分类资料${animal.uncertain ? '，物种待确认' : ''}`);
     button.setAttribute('aria-haspopup', 'dialog');
     const frame = element('div', 'card-photo');
     const photo = animal.images[0];
@@ -64,8 +64,8 @@
     matches.forEach(({ animal, index }) => fragment.append(createCard(animal, index)));
     grid.replaceChildren(fragment);
     $('#empty-state').hidden = matches.length !== 0;
-    $('#empty-title').textContent = state.animals.length ? '这一页，还没有相遇' : '收藏正在整理中';
-    $('#empty-description').textContent = state.animals.length ? '换一个名字，或看看其他类别。' : '新的野外相遇，将在这里留下记录。';
+    $('#empty-title').textContent = state.animals.length ? '未找到匹配条目' : '暂无观察记录';
+    $('#empty-description').textContent = state.animals.length ? '请调整检索词或分类条件。' : '影像与分类资料尚未录入。';
     $('#reset-filters').hidden = state.animals.length === 0;
     $('#result-status').textContent = `收录 ${state.animals.length} 条 · 当前 ${matches.length} 条`;
     $('#clear-search').hidden = search.value.length === 0;
@@ -179,7 +179,7 @@
   async function load() {
     grid.setAttribute('aria-busy', 'true');
     $('#empty-state').hidden = true;
-    $('#result-status').textContent = '正在载入相遇记录…';
+    $('#result-status').textContent = '正在载入观察记录…';
     try {
       const response = await fetch('animals.json');
       if (!response.ok) throw new Error(`Collection request failed: ${response.status}`);
@@ -199,20 +199,11 @@
       document.querySelectorAll('[data-count]').forEach((count) => {
         count.textContent = count.dataset.count === 'all' ? state.animals.length : state.animals.filter((animal) => animal.category === count.dataset.count).length;
       });
-      $('#collection-total').textContent = `${state.animals.length} 个动物条目`;
-      const coverAnimal = state.animals.find((animal) => animal.images.length && /象|elephant/i.test(`${animal.name} ${animal.en}`)) || state.animals.find((animal) => animal.images.length);
-      if (coverAnimal) {
-        $('#cover-image').src = photoPath(coverAnimal.images[0].src);
-        $('#cover-image').alt = coverAnimal.images[0].alt || coverAnimal.name;
-        $('#cover-caption').textContent = coverAnimal.name;
-        $('#cover').hidden = false;
-      }
       render();
     } catch (error) {
       console.error('Unable to load field notes:', error);
-      $('#collection-total').textContent = '暂未载入';
-      $('#result-status').textContent = '收藏暂时无法载入';
-      $('#empty-title').textContent = '这一页，暂时未能翻开';
+      $('#result-status').textContent = '资料暂时无法载入';
+      $('#empty-title').textContent = '数据加载失败';
       $('#empty-description').textContent = '请检查网络连接，然后再试一次。';
       $('#reset-filters').textContent = '重新载入';
       $('#reset-filters').hidden = false;
