@@ -646,5 +646,30 @@
       "https://animaldiversity.org/accounts/Madoqua_kirkii/",
       "https://www.brookfieldzoo.org/animals/kirks-dik-dik"
     ]
+  },
+  {
+    "id": "klipspringer",
+    "name": "山羚",
+    "en": "Klipspringer",
+    "family": "牛科 · Bovidae",
+    "category": "mammal",
+    "intro": "学名：Oreotragus oreotragus。适应岩石地形的小型羚羊，常成对活动，以嫩叶、嫩枝和花果等植物为食。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/klipspringer-1.webp",
+        "thumb": "images/klipspringer-1-thumb.webp",
+        "alt": "干草与灌丛间的山羚，第1张"
+      },
+      {
+        "src": "images/klipspringer-2.webp",
+        "thumb": "images/klipspringer-2-thumb.webp",
+        "alt": "干草与灌丛间的山羚，第2张"
+      }
+    ],
+    "sources": [
+      "https://animaldiversity.org/accounts/Oreotragus_oreotragus/",
+      "https://www.inaturalist.org/zh-TW/taxa/42384-Oreotragus-oreotragus"
+    ]
   }
 ]
