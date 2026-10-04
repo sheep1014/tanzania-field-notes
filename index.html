@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#f5f2e9">
   <meta name="description" content="2026 年坦桑尼亚野生动物影像记录，按类群检索动物名称、所属科及生态习性。">
   <title>坦桑尼亚动物图鉴 · Tanzania Wildlife Catalogue</title>
-  <link rel="stylesheet" href="styles.css?v=bilingual-filters-1">
-  <script src="app.js?v=data-refresh-1" defer></script>
+  <link rel="stylesheet" href="styles.css?v=swipe-1">
+  <script src="app.js?v=swipe-1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#collection">跳至动物图鉴</a>
@@ -40,7 +40,7 @@
   <dialog id="animal-dialog" aria-labelledby="detail-name" aria-describedby="detail-intro">
     <div class="dialog-top"><span id="detail-index" class="eyebrow"></span><button type="button" class="close-dialog" id="close-dialog" aria-label="关闭动物详情">关闭 <span aria-hidden="true">×</span></button></div>
     <div class="detail-layout">
-      <div class="detail-gallery"><div class="detail-photo"><img id="detail-image" alt=""></div><div class="gallery-controls" id="gallery-controls"><button id="previous-image" type="button" aria-label="上一张照片">← <span>上一张</span></button><span id="image-count" role="status" aria-live="polite"></span><button id="next-image" type="button" aria-label="下一张照片"><span>下一张</span> →</button></div></div>
+      <div class="detail-gallery"><div class="detail-photo" aria-label="左右滑动切换照片"><img id="detail-image" alt="" draggable="false"></div><div class="gallery-controls" id="gallery-controls"><span id="image-count" role="status" aria-live="polite"></span><span id="swipe-hint">左右滑动 · Swipe</span></div></div>
       <div class="detail-copy"><p class="eyebrow">IDENTIFICATION & ECOLOGY</p><h2 id="detail-name"></h2><p id="detail-en" class="detail-en"></p><div class="detail-tags"><span id="detail-family"></span><span id="detail-uncertain" class="uncertain" hidden>物种待确认</span></div><p id="detail-intro"></p><p id="detail-identification" class="identification" hidden>暂按照片特征识别，具体物种仍待确认。</p><p class="detail-footnote">影像记录地区：坦桑尼亚 · 2026</p></div>
     </div>
   </dialog>

@@ -111,11 +111,7 @@
     };
     if (photo) image.src = photoPath(photo.src);
     $('#image-count').textContent = photo ? `${String(state.image + 1).padStart(2, '0')} / ${String(photos.length).padStart(2, '0')}` : '影像待补充';
-    $('#previous-image').disabled = state.image === 0;
-    $('#next-image').disabled = state.image >= photos.length - 1;
-    $('#previous-image').hidden = photos.length < 2;
-    $('#next-image').hidden = photos.length < 2;
-    $('#gallery-controls').style.justifyContent = photos.length < 2 ? 'center' : '';
+    $('#swipe-hint').hidden = photos.length < 2;
   }
 
   function openDetail(animal, index, trigger) {
@@ -170,8 +166,25 @@
     if (event.key === 'ArrowRight') { event.preventDefault(); turnImage(1); }
     // Escape and focus containment are provided by the native modal dialog.
   });
-  $('#previous-image').addEventListener('click', () => turnImage(-1));
-  $('#next-image').addEventListener('click', () => turnImage(1));
+  const swipeSurface = $('.detail-photo');
+  let gesture = null;
+  swipeSurface.addEventListener('pointerdown', (event) => {
+    if (!event.isPrimary || event.button !== 0 || !state.animal || state.animal.images.length < 2) return;
+    gesture = { id: event.pointerId, x: event.clientX, y: event.clientY, animal: state.animal };
+    if (event.isTrusted) swipeSurface.setPointerCapture(event.pointerId);
+  });
+  swipeSurface.addEventListener('pointerup', (event) => {
+    if (!gesture || gesture.id !== event.pointerId) return;
+    const start = gesture;
+    gesture = null;
+    const dx = event.clientX - start.x;
+    const dy = event.clientY - start.y;
+    if (dialog.open && state.animal === start.animal && Math.abs(dx) >= 40 && Math.abs(dx) > Math.abs(dy) * 1.5) turnImage(dx < 0 ? 1 : -1);
+  });
+  swipeSurface.addEventListener('pointercancel', () => { gesture = null; });
+  swipeSurface.addEventListener('lostpointercapture', () => { gesture = null; });
+  swipeSurface.addEventListener('dragstart', (event) => event.preventDefault());
+  dialog.addEventListener('close', () => { gesture = null; });
   filters.forEach((button) => button.addEventListener('click', () => {
     if (!state.loaded) return;
     state.category = button.dataset.category;

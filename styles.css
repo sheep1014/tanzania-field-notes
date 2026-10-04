@@ -2,3 +2,5 @@
 
 /* Bilingual category labels */
 .filter{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:58px;padding-top:8px;padding-bottom:8px}.filter .filter-label{font-size:inherit;margin:0;opacity:1}.filter .filter-en{font-size:10px;line-height:1.2;letter-spacing:.15px;margin:0;opacity:.85}
+
+.detail-photo{touch-action:pan-y pinch-zoom;user-select:none;-webkit-user-select:none}.detail-photo img{-webkit-user-drag:none}.gallery-controls{justify-content:center;gap:16px;min-height:40px}#swipe-hint{font-size:10px;color:var(--muted)}
