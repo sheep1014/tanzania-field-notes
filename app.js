@@ -203,7 +203,9 @@
     $('#empty-state').hidden = true;
     $('#result-status').textContent = '正在载入观察记录…';
     try {
-      const response = await fetch('animals.json');
+      const dataUrl = new URL('animals.json', document.baseURI);
+      dataUrl.searchParams.set('v', new URL(location.href).searchParams.get('v') || String(Date.now()));
+      const response = await fetch(dataUrl.href, { cache: 'no-store' });
       if (!response.ok) throw new Error(`Collection request failed: ${response.status}`);
       const data = await response.json();
       if (!Array.isArray(data)) throw new Error('The collection must be an array.');
