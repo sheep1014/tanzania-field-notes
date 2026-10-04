@@ -60,6 +60,11 @@
         "src": "images/baboon-1.webp",
         "thumb": "images/baboon-1-thumb.webp",
         "alt": "东非狒狒 · 坦桑尼亚旅行实拍 1"
+      },
+      {
+        "src": "images/baboon-2.webp",
+        "thumb": "images/baboon-2-thumb.webp",
+        "alt": "东非狒狒 · 坦桑尼亚实拍"
       }
     ]
   },
@@ -448,6 +453,22 @@
         "src": "images/superb-starling-1.webp",
         "thumb": "images/superb-starling-1-thumb.webp",
         "alt": "丽椋鸟，蓝绿色背羽与浅色虹膜"
+      }
+    ]
+  },
+  {
+    "id": "buffalo-weaver",
+    "name": "白头牛文鸟",
+    "en": "White-headed Buffalo Weaver",
+    "family": "织雀科 · Ploceidae",
+    "category": "bird",
+    "intro": "学名：Dinemellia dinemelli。常在地面成小群觅食，食物包括昆虫、种子和果实。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/buffalo-weaver-1.webp",
+        "thumb": "images/buffalo-weaver-1-thumb.webp",
+        "alt": "白头牛文鸟 · 坦桑尼亚实拍"
       }
     ]
   }
