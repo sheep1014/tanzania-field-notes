@@ -492,5 +492,21 @@
         "alt": "大羚羊 · 草原影像 2"
       }
     ]
+  },
+  {
+    "id": "vulture",
+    "name": "兀鹫",
+    "en": "Gyps Vulture",
+    "family": "鹰科 · Accipitridae",
+    "category": "bird",
+    "intro": "主要取食动物尸体，在生态系统中承担清除腐肉的作用。照片中个体外形接近非洲白背兀鹫，但尚不能排除相似种，具体种类待确认。",
+    "uncertain": true,
+    "images": [
+      {
+        "src": "images/vulture-1.webp",
+        "thumb": "images/vulture-1-thumb.webp",
+        "alt": "动物尸体旁的兀鹫，具体种待确认"
+      }
+    ]
   }
 ]
