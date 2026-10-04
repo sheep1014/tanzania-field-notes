@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#f5f2e9">
   <meta name="description" content="2026 年坦桑尼亚野生动物影像记录，按类群检索动物名称、所属科及生态习性。">
   <title>坦桑尼亚动物图鉴 · Tanzania Wildlife Catalogue</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=bilingual-filters-1">
   <script src="app.js?v=detail-image-fix-1" defer></script>
 </head>
 <body>
@@ -17,10 +17,10 @@
       <section class="collection" id="collection" aria-label="动物分类索引">
         <div class="browse-tools">
           <div class="filters" role="group" aria-label="按动物类别筛选">
-            <button class="filter is-active" type="button" data-category="all" aria-pressed="true">全部 <span data-count="all">—</span></button>
-            <button class="filter" type="button" data-category="mammal" aria-pressed="false">哺乳类 <span data-count="mammal">—</span></button>
-            <button class="filter" type="button" data-category="bird" aria-pressed="false">鸟类 <span data-count="bird">—</span></button>
-            <button class="filter" type="button" data-category="reptile" aria-pressed="false">爬行类 <span data-count="reptile">—</span></button>
+            <button class="filter is-active" type="button" data-category="all" aria-pressed="true"><span class="filter-label">全部 <span data-count="all">—</span></span><span class="filter-en" lang="en">All</span></button>
+            <button class="filter" type="button" data-category="mammal" aria-pressed="false"><span class="filter-label">哺乳类 <span data-count="mammal">—</span></span><span class="filter-en" lang="en">Mammals</span></button>
+            <button class="filter" type="button" data-category="bird" aria-pressed="false"><span class="filter-label">鸟类 <span data-count="bird">—</span></span><span class="filter-en" lang="en">Birds</span></button>
+            <button class="filter" type="button" data-category="reptile" aria-pressed="false"><span class="filter-label">爬行类 <span data-count="reptile">—</span></span><span class="filter-en" lang="en">Reptiles</span></button>
           </div>
           <form class="search" role="search" id="search-form">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>
