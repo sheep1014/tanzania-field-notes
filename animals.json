@@ -582,5 +582,24 @@
       "https://www.oiseaux.net/en/oiseaux/d.arnaud.s.barbet.html",
       "https://carolinabirds.org/HTML/Pici_Barbet.htm"
     ]
+  },
+  {
+    "id": "chameleon",
+    "name": "变色龙",
+    "en": "Chameleon",
+    "family": "避役科 · Chamaeleonidae",
+    "category": "reptile",
+    "intro": "又称避役。主要取食昆虫，利用快速弹出的长舌捕捉猎物。照片可确认属于变色龙类群，具体种类待确认。",
+    "uncertain": true,
+    "images": [
+      {
+        "src": "images/chameleon-1.webp",
+        "thumb": "images/chameleon-1-thumb.webp",
+        "alt": "树皮与苔藓间的变色龙，具体种类待确认"
+      }
+    ],
+    "sources": [
+      "https://animals.sandiegozoo.org/animals/chameleon"
+    ]
   }
 ]
