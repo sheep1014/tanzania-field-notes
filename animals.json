@@ -434,5 +434,21 @@
         "alt": "草原上的非洲鸵鸟"
       }
     ]
+  },
+  {
+    "id": "superb-starling",
+    "name": "丽椋鸟",
+    "en": "Superb Starling",
+    "family": "椋鸟科 · Sturnidae",
+    "category": "bird",
+    "intro": "学名：Lamprotornis superbus。常在地面觅食，以昆虫、果实和种子等为食。蓝绿色羽毛具有金属光泽，成鸟虹膜浅色。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/superb-starling-1.webp",
+        "thumb": "images/superb-starling-1-thumb.webp",
+        "alt": "丽椋鸟，蓝绿色背羽与浅色虹膜"
+      }
+    ]
   }
 ]
