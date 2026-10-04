@@ -1,0 +1,385 @@
+[
+  {
+    "id": "mongoose",
+    "name": "缟獴",
+    "en": "Banded Mongoose",
+    "family": "獴科 · Herpestidae",
+    "category": "mammal",
+    "intro": "生活在非洲草原与疏林，喜欢群居，以昆虫等无脊椎动物为主食。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/mongoose-1.webp",
+        "thumb": "images/mongoose-1-thumb.webp",
+        "alt": "缟獴 · 坦桑尼亚旅行实拍 1"
+      }
+    ]
+  },
+  {
+    "id": "wildebeest",
+    "name": "斑纹角马",
+    "en": "Blue Wildebeest",
+    "family": "牛科 · Bovidae",
+    "category": "mammal",
+    "intro": "以草为食，成群生活。塞伦盖蒂的种群随水草迁徙，是大迁徙的主角。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/wildebeest-1.webp",
+        "thumb": "images/wildebeest-1-thumb.webp",
+        "alt": "斑纹角马 · 坦桑尼亚旅行实拍 1"
+      }
+    ]
+  },
+  {
+    "id": "impala",
+    "name": "黑斑羚",
+    "en": "Impala",
+    "family": "牛科 · Bovidae",
+    "category": "mammal",
+    "intro": "生活在草原与疏林，常成群活动。雄性长角，雌性无角。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/impala-1.webp",
+        "thumb": "images/impala-1-thumb.webp",
+        "alt": "黑斑羚 · 坦桑尼亚旅行实拍 1"
+      }
+    ]
+  },
+  {
+    "id": "baboon",
+    "name": "东非狒狒",
+    "en": "Olive Baboon",
+    "family": "猴科 · Cercopithecidae",
+    "category": "mammal",
+    "intro": "也称橄榄狒狒。成群生活，白天多在地面觅食，食性杂；相互理毛是维系关系的方式。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/baboon-1.webp",
+        "thumb": "images/baboon-1-thumb.webp",
+        "alt": "东非狒狒 · 坦桑尼亚旅行实拍 1"
+      }
+    ]
+  },
+  {
+    "id": "elephant",
+    "name": "非洲草原象",
+    "en": "African Savanna Elephant",
+    "family": "象科 · Elephantidae",
+    "category": "mammal",
+    "intro": "现存最大的陆生动物，以草、枝叶等为食。雌象与幼象组成家族群。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/elephant-1.webp",
+        "thumb": "images/elephant-1-thumb.webp",
+        "alt": "非洲草原象 · 坦桑尼亚旅行实拍 1"
+      }
+    ]
+  },
+  {
+    "id": "lion",
+    "name": "狮",
+    "en": "Lion",
+    "family": "猫科 · Felidae",
+    "category": "mammal",
+    "intro": "以狮群生活，常协作捕猎，雌狮也会共同照顾幼崽。雄狮可结成联盟，共同对抗竞争者。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/lion-1.webp",
+        "thumb": "images/lion-1-thumb.webp",
+        "alt": "狮 · 坦桑尼亚旅行实拍 1"
+      },
+      {
+        "src": "images/lion-2.webp",
+        "thumb": "images/lion-2-thumb.webp",
+        "alt": "狮 · 坦桑尼亚旅行实拍 2"
+      },
+      {
+        "src": "images/lion-3.webp",
+        "thumb": "images/lion-3-thumb.webp",
+        "alt": "狮 · 坦桑尼亚旅行实拍 3"
+      }
+    ]
+  },
+  {
+    "id": "stork",
+    "name": "黄嘴鹮鹳",
+    "en": "Yellow-billed Stork",
+    "family": "鹳科 · Ciconiidae",
+    "category": "bird",
+    "intro": "常在浅水中觅食，将长喙探入水中，捕捉小鱼及其他水生动物。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/stork-1.webp",
+        "thumb": "images/stork-1-thumb.webp",
+        "alt": "黄嘴鹮鹳 · 坦桑尼亚旅行实拍 1"
+      }
+    ]
+  },
+  {
+    "id": "buffalo",
+    "name": "非洲水牛",
+    "en": "African Buffalo",
+    "family": "牛科 · Bovidae",
+    "category": "mammal",
+    "intro": "常成群活动，也可见雄性组成的小群。是非洲五霸之一。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/buffalo-1.webp",
+        "thumb": "images/buffalo-1-thumb.webp",
+        "alt": "非洲水牛 · 坦桑尼亚旅行实拍 1"
+      }
+    ]
+  },
+  {
+    "id": "heron",
+    "name": "黑头鹭",
+    "en": "Black-headed Heron",
+    "family": "鹭科 · Ardeidae",
+    "category": "bird",
+    "intro": "分布于非洲，常在草地与湿地活动。黑色头顶和颈后与浅色喉部形成鲜明对比。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/heron-1.webp",
+        "thumb": "images/heron-1-thumb.webp",
+        "alt": "黑头鹭 · 坦桑尼亚旅行实拍 1"
+      }
+    ]
+  },
+  {
+    "id": "zebra",
+    "name": "平原斑马",
+    "en": "Plains Zebra",
+    "family": "马科 · Equidae",
+    "category": "mammal",
+    "intro": "以草为主食，组成稳定的家庭群，也会汇聚成大群。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/zebra-1.webp",
+        "thumb": "images/zebra-1-thumb.webp",
+        "alt": "平原斑马 · 坦桑尼亚旅行实拍 1"
+      }
+    ]
+  },
+  {
+    "id": "warthog",
+    "name": "普通疣猪",
+    "en": "Common Warthog",
+    "family": "猪科 · Suidae",
+    "category": "mammal",
+    "intro": "生活在非洲草原，常弯下前肢，贴近地面啃食短草。日常也简称疣猪。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/warthog-1.webp",
+        "thumb": "images/warthog-1-thumb.webp",
+        "alt": "普通疣猪 · 坦桑尼亚旅行实拍 1"
+      }
+    ]
+  },
+  {
+    "id": "hartebeest",
+    "name": "狷羚",
+    "en": "Hartebeest",
+    "family": "牛科 · Bovidae",
+    "category": "mammal",
+    "intro": "生活在开阔草原，常成群活动，主要以草为食。修长的脸和弯折的角很有辨识度。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/hartebeest-1.webp",
+        "thumb": "images/hartebeest-1-thumb.webp",
+        "alt": "狷羚 · 坦桑尼亚旅行实拍 1"
+      }
+    ]
+  },
+  {
+    "id": "leopard",
+    "name": "花豹",
+    "en": "Leopard",
+    "family": "猫科 · Felidae",
+    "category": "mammal",
+    "intro": "通常独居，善于攀爬，也会在树上休息和藏食。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/leopard-1.webp",
+        "thumb": "images/leopard-1-thumb.webp",
+        "alt": "花豹 · 坦桑尼亚旅行实拍 1"
+      }
+    ]
+  },
+  {
+    "id": "bustard",
+    "name": "灰颈鸨",
+    "en": "Kori Bustard",
+    "family": "鸨科 · Otididae",
+    "category": "bird",
+    "intro": "常在草原地面步行觅食，食性杂，吃昆虫、小型动物及植物。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/bustard-1.webp",
+        "thumb": "images/bustard-1-thumb.webp",
+        "alt": "灰颈鸨 · 坦桑尼亚旅行实拍 1"
+      },
+      {
+        "src": "images/bustard-2.webp",
+        "thumb": "images/bustard-2-thumb.webp",
+        "alt": "灰颈鸨 · 坦桑尼亚旅行实拍 2"
+      }
+    ]
+  },
+  {
+    "id": "hippo",
+    "name": "河马",
+    "en": "Hippopotamus",
+    "family": "河马科 · Hippopotamidae",
+    "category": "mammal",
+    "intro": "白天多在水中休息，夜间上岸觅食，主要吃草。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/hippo-1.webp",
+        "thumb": "images/hippo-1-thumb.webp",
+        "alt": "河马 · 坦桑尼亚旅行实拍 1"
+      }
+    ]
+  },
+  {
+    "id": "cheetah",
+    "name": "猎豹",
+    "en": "Cheetah",
+    "family": "猫科 · Felidae",
+    "category": "mammal",
+    "intro": "擅长短距离冲刺，以高速追逐猎物。炎热时常在树荫下休息。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/cheetah-1.webp",
+        "thumb": "images/cheetah-1-thumb.webp",
+        "alt": "猎豹 · 坦桑尼亚旅行实拍 1"
+      }
+    ]
+  },
+  {
+    "id": "sandgrouse",
+    "name": "沙鸡",
+    "en": "Sandgrouse",
+    "family": "沙鸡科 · Pteroclidae",
+    "category": "bird",
+    "intro": "栖息于开阔地带，多在地面觅食，以植物种子为主食。本照片具体种类仍待确认。",
+    "uncertain": true,
+    "images": [
+      {
+        "src": "images/sandgrouse-1.webp",
+        "thumb": "images/sandgrouse-1-thumb.webp",
+        "alt": "沙鸡 · 坦桑尼亚旅行实拍 1"
+      }
+    ]
+  },
+  {
+    "id": "giraffe",
+    "name": "长颈鹿",
+    "en": "Giraffe",
+    "family": "长颈鹿科 · Giraffidae",
+    "category": "mammal",
+    "intro": "以树叶和嫩枝为食，借助长颈和灵活的舌头采食。此处暂不细分种或亚种。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/giraffe-1.webp",
+        "thumb": "images/giraffe-1-thumb.webp",
+        "alt": "长颈鹿 · 坦桑尼亚旅行实拍 1"
+      }
+    ]
+  },
+  {
+    "id": "wolf",
+    "name": "非洲金狼",
+    "en": "African Golden Wolf",
+    "family": "犬科 · Canidae",
+    "category": "mammal",
+    "intro": "食性广，捕食小型动物，也吃腐肉和果实。过去曾被归作金豺；本条依据照片与拍摄地区判断。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/wolf-1.webp",
+        "thumb": "images/wolf-1-thumb.webp",
+        "alt": "非洲金狼 · 坦桑尼亚旅行实拍 1"
+      }
+    ]
+  },
+  {
+    "id": "hyena",
+    "name": "斑鬣狗",
+    "en": "Spotted Hyena",
+    "family": "鬣狗科 · Hyaenidae",
+    "category": "mammal",
+    "intro": "群居，善于协作捕猎，也会取食腐肉。名字虽带狗，却并不属于犬科。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/hyena-1.webp",
+        "thumb": "images/hyena-1-thumb.webp",
+        "alt": "斑鬣狗 · 坦桑尼亚旅行实拍 1"
+      }
+    ]
+  },
+  {
+    "id": "crocodile",
+    "name": "尼罗鳄",
+    "en": "Nile Crocodile",
+    "family": "鳄科 · Crocodylidae",
+    "category": "reptile",
+    "intro": "常潜伏在水中伺机捕猎，食物包括鱼类、鸟类和哺乳动物。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/crocodile-1.webp",
+        "thumb": "images/crocodile-1-thumb.webp",
+        "alt": "尼罗鳄 · 坦桑尼亚旅行实拍 1"
+      }
+    ]
+  },
+  {
+    "id": "lapwing",
+    "name": "距翅麦鸡",
+    "en": "Spur-winged Lapwing",
+    "family": "鸻科 · Charadriidae",
+    "category": "bird",
+    "intro": "常在湿地边缘和开阔地面活动，是一种长腿涉禽。名字虽带鸡，却不属于鸡类。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/lapwing-1.webp",
+        "thumb": "images/lapwing-1-thumb.webp",
+        "alt": "距翅麦鸡 · 坦桑尼亚旅行实拍 1"
+      }
+    ]
+  },
+  {
+    "id": "ibis",
+    "name": "非洲圣鹮",
+    "en": "African Sacred Ibis",
+    "family": "鹮科 · Threskiornithidae",
+    "category": "bird",
+    "intro": "常在湿地和草地觅食，用弯长的喙探寻昆虫、蠕虫及其他小动物。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/ibis-1.webp",
+        "thumb": "images/ibis-1-thumb.webp",
+        "alt": "非洲圣鹮 · 坦桑尼亚旅行实拍 1"
+      }
+    ]
+  }
+]
