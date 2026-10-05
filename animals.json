@@ -371,6 +371,11 @@
         "src": "images/hyena-1.webp",
         "thumb": "images/hyena-1-thumb.webp",
         "alt": "斑鬣狗 · 坦桑尼亚旅行实拍 1"
+      },
+      {
+        "src": "images/hyena-2.webp",
+        "thumb": "images/hyena-2-thumb.webp",
+        "alt": "斑鬣狗 · 旅行实拍 2"
       }
     ]
   },
@@ -808,6 +813,59 @@
         "src": "images/small-passerine-1.webp",
         "thumb": "images/small-passerine-1-thumb.webp",
         "alt": "小型雀形鸟（待确认） · 旅行实拍 1"
+      }
+    ]
+  },
+  {
+    "id": "black-backed-jackal",
+    "name": "黑背胡狼",
+    "en": "Black-backed Jackal",
+    "family": "犬科 · Canidae",
+    "category": "mammal",
+    "intro": "食性广，捕食小型动物，也取食腐肉、昆虫和果实。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/black-backed-jackal-1.webp",
+        "thumb": "images/black-backed-jackal-1-thumb.webp",
+        "alt": "黑背胡狼 · 旅行实拍 1"
+      }
+    ]
+  },
+  {
+    "id": "greater-flamingo",
+    "name": "大红鹳",
+    "en": "Greater Flamingo",
+    "family": "红鹳科 · Phoenicopteridae",
+    "category": "bird",
+    "intro": "常在浅水中成群活动，用喙滤食小型无脊椎动物和藻类。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/greater-flamingo-1.webp",
+        "thumb": "images/greater-flamingo-1-thumb.webp",
+        "alt": "大红鹳 · 旅行实拍 1"
+      },
+      {
+        "src": "images/greater-flamingo-2.webp",
+        "thumb": "images/greater-flamingo-2-thumb.webp",
+        "alt": "大红鹳 · 旅行实拍 2"
+      }
+    ]
+  },
+  {
+    "id": "unidentified-waterbirds",
+    "name": "水鸟（待确认）",
+    "en": "Unidentified Waterbirds",
+    "family": "科待确认 · Family unconfirmed",
+    "category": "bird",
+    "intro": "水鸟食性因种而异，常取食水生植物或小型动物。",
+    "uncertain": true,
+    "images": [
+      {
+        "src": "images/unidentified-waterbirds-1.webp",
+        "thumb": "images/unidentified-waterbirds-1-thumb.webp",
+        "alt": "水鸟（待确认） · 旅行实拍 1"
       }
     ]
   }
