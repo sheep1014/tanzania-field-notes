@@ -81,6 +81,11 @@
         "src": "images/elephant-1.webp",
         "thumb": "images/elephant-1-thumb.webp",
         "alt": "非洲草原象 · 坦桑尼亚旅行实拍 1"
+      },
+      {
+        "src": "images/elephant-2.webp",
+        "thumb": "images/elephant-2-thumb.webp",
+        "alt": "非洲草原象 · 旅行实拍 2"
       }
     ]
   },
@@ -107,6 +112,11 @@
         "src": "images/lion-3.webp",
         "thumb": "images/lion-3-thumb.webp",
         "alt": "狮 · 坦桑尼亚旅行实拍 3"
+      },
+      {
+        "src": "images/lion-4.webp",
+        "thumb": "images/lion-4-thumb.webp",
+        "alt": "狮 · 旅行实拍 4"
       }
     ]
   },
@@ -584,6 +594,16 @@
         "src": "images/marabou-2.webp",
         "thumb": "images/marabou-2-thumb.webp",
         "alt": "非洲秃鹳 · 旅行实拍 2"
+      },
+      {
+        "src": "images/marabou-3.webp",
+        "thumb": "images/marabou-3-thumb.webp",
+        "alt": "非洲秃鹳 · 旅行实拍 3"
+      },
+      {
+        "src": "images/marabou-4.webp",
+        "thumb": "images/marabou-4-thumb.webp",
+        "alt": "非洲秃鹳 · 旅行实拍 4"
       }
     ]
   },
@@ -751,6 +771,43 @@
         "src": "images/black-rhino-5.webp",
         "thumb": "images/black-rhino-5-thumb.webp",
         "alt": "黑犀牛（疑似） · 旅行实拍 5"
+      }
+    ]
+  },
+  {
+    "id": "grey-crowned-crane",
+    "name": "灰冕鹤",
+    "en": "Grey Crowned Crane",
+    "family": "鹤科 · Gruidae",
+    "category": "bird",
+    "intro": "生活在草原与湿地附近，取食种子、昆虫等，也会在树上栖息。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/grey-crowned-crane-1.webp",
+        "thumb": "images/grey-crowned-crane-1-thumb.webp",
+        "alt": "灰冕鹤 · 旅行实拍 1"
+      },
+      {
+        "src": "images/grey-crowned-crane-2.webp",
+        "thumb": "images/grey-crowned-crane-2-thumb.webp",
+        "alt": "灰冕鹤 · 旅行实拍 2"
+      }
+    ]
+  },
+  {
+    "id": "small-passerine",
+    "name": "小型雀形鸟（待确认）",
+    "en": "Unidentified Passerine",
+    "family": "科待确认 · Family unconfirmed",
+    "category": "bird",
+    "intro": "雀形鸟种类众多，食性因种而异，常取食种子或昆虫。",
+    "uncertain": true,
+    "images": [
+      {
+        "src": "images/small-passerine-1.webp",
+        "thumb": "images/small-passerine-1-thumb.webp",
+        "alt": "小型雀形鸟（待确认） · 旅行实拍 1"
       }
     ]
   }
