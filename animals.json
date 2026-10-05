@@ -696,5 +696,37 @@
       "https://animaldiversity.org/accounts/Oreotragus_oreotragus/",
       "https://www.inaturalist.org/zh-TW/taxa/42384-Oreotragus-oreotragus"
     ]
+  },
+  {
+    "id": "helmeted-guineafowl",
+    "name": "珠鸡",
+    "en": "Helmeted Guineafowl",
+    "family": "珠鸡科 · Numididae",
+    "category": "bird",
+    "intro": "常成群在地面觅食，以种子、昆虫等为食。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/helmeted-guineafowl-1.webp",
+        "thumb": "images/helmeted-guineafowl-1-thumb.webp",
+        "alt": "珠鸡 · 旅行实拍 1"
+      }
+    ]
+  },
+  {
+    "id": "black-rhino",
+    "name": "黑犀牛（疑似）",
+    "en": "Black Rhinoceros (probable)",
+    "family": "犀科 · Rhinocerotidae",
+    "category": "mammal",
+    "intro": "以灌木枝叶为主食，通常独居。",
+    "uncertain": true,
+    "images": [
+      {
+        "src": "images/black-rhino-1.webp",
+        "thumb": "images/black-rhino-1-thumb.webp",
+        "alt": "黑犀牛（疑似） · 旅行实拍 1"
+      }
+    ]
   }
 ]
