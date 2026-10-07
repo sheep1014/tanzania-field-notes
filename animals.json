@@ -868,5 +868,42 @@
         "alt": "水鸟（待确认） · 旅行实拍 1"
       }
     ]
+  },
+  {
+    "id": "dusky-turtle-dove",
+    "name": "粉胸斑鸠",
+    "en": "Dusky Turtle-Dove",
+    "family": "鸠鸽科 · Columbidae",
+    "category": "bird",
+    "intro": "栖息于东非山地林地，也会出现在花园、人工林和耕作地。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/dusky-turtle-dove-1.webp",
+        "thumb": "images/dusky-turtle-dove-1-thumb.webp",
+        "alt": "粉胸斑鸠 · 旅行实拍 1"
+      }
+    ]
+  },
+  {
+    "id": "white-necked-raven",
+    "name": "非洲渡鸦",
+    "en": "White-necked Raven",
+    "family": "鸦科 · Corvidae",
+    "category": "bird",
+    "intro": "也称白颈渡鸦。常见于非洲丘陵与山地，杂食，取食昆虫、小动物及腐肉。",
+    "uncertain": false,
+    "images": [
+      {
+        "src": "images/white-necked-raven-1.webp",
+        "thumb": "images/white-necked-raven-1-thumb.webp",
+        "alt": "非洲渡鸦 · 旅行实拍 1"
+      },
+      {
+        "src": "images/white-necked-raven-2.webp",
+        "thumb": "images/white-necked-raven-2-thumb.webp",
+        "alt": "非洲渡鸦 · 旅行实拍 2"
+      }
+    ]
   }
 ]
